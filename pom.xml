@@ -11,6 +11,7 @@
     <modules>
         <module>persistence</module>
         <module>web</module>
+        <module>aaa</module>
     </modules>
 
 
