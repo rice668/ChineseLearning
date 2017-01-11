@@ -13,6 +13,12 @@
         <module>web</module>
     </modules>
 
+    <developers>
+        <developer>zhangminglei</developer>
+        <!--Please mark your name here-->
+
+    </developers>
+
     <dependencies>
         <dependency>
             <groupId>javax.servlet</groupId>
