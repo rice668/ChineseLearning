@@ -1,3 +1,5 @@
+package example;
+
 import com.west.entity.User;
 import com.west.pojo.DataResult;
 import com.west.pojo.Result;
