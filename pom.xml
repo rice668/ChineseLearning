@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>China</groupId>
-    <artifactId>MainProject</artifactId>
+    <artifactId>ChineseLearning</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
@@ -14,10 +14,15 @@
     </modules>
 
     <developers>
-        <developer>zhangminglei</developer>
-        <!--Please mark your name here-->
-        <developer>liugaowei</developer>
-        <developer>niechu</developer>
+        <developer>
+            <name>zhangminglei</name>
+        </developer>
+        <developer>
+            <name>liugaowei</name>
+        </developer>
+        <developer>
+            <name>niechu</name>
+        </developer>
     </developers>
 
     <dependencies>
@@ -54,6 +59,24 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-web</artifactId>
+            <version>4.3.5.RELEASE</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>4.3.5.RELEASE</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>4.3.5.RELEASE</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aop</artifactId>
             <version>4.3.5.RELEASE</version>
         </dependency>
 
