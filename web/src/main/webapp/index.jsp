@@ -11,6 +11,6 @@
     <title>Title</title>
 </head>
 <body>
-    <a href="helloworld.html">Click here to read hello message </a>
+    <a href="helloworld.html">鸡年大吉 from Rice</a>
 </body>
 </html>
