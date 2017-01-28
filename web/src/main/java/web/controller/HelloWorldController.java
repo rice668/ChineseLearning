@@ -12,7 +12,7 @@ import java.util.Date;
 @Controller
 public class HelloWorldController {
 
-  @RequestMapping("/helloworld")
+  @RequestMapping("/helloworlds")
   public ModelAndView hello() {
     String helloWorldMessage = "一年之计在于春，一天之计在于晨 from " + new Date();
     return new ModelAndView("/hellos", "messaget", helloWorldMessage);
