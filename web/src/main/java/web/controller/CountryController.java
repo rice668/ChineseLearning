@@ -21,39 +21,36 @@ public class CountryController {
   @Autowired
   CountryService countryService;
 
-  @RequestMapping(value = "/getAllCountries", method = RequestMethod.GET, headers = "Accept=application/json")
+  @RequestMapping(value = "/getAllCountriess", method = RequestMethod.GET)
   public String getCountries(Model model) {
-
     List<Country> listOfCountries = countryService.getAllCountries();
     model.addAttribute("country", new Country());
     model.addAttribute("listOfCountries", listOfCountries);
     return "countryDetails";
   }
 
-  @RequestMapping(value = "/getCountry/{id}", method = RequestMethod.GET, headers = "Accept=application/json")
+  @RequestMapping(value = "/getCountry/{id}", method = RequestMethod.GET)
   public Country getCountryById(@PathVariable int id) {
     return countryService.getCountry(id);
   }
 
-  @RequestMapping(value = "/addCountry", method = RequestMethod.POST, headers = "Accept=application/json")
+  @RequestMapping(value = "/addCountry", method = RequestMethod.POST)
   public String addCountry(@ModelAttribute("country") Country country) {
-    if(country.getId()==0) {
-      countryService.addCountry(country);
-    }
-    return "redirect:/getAllCountries";
+    countryService.addCountry(country);
+    return "redirect:/getAllCountriess";
   }
 
-  @RequestMapping(value = "/updateCountry/{id}", method = RequestMethod.GET, headers = "Accept=application/json")
+  @RequestMapping(value = "/updateCountry/{id}", method = RequestMethod.PUT)
   public String updateCountry(@PathVariable("id") int id,Model model) {
     model.addAttribute("country", this.countryService.getCountry(id));
     model.addAttribute("listOfCountries", this.countryService.getAllCountries());
     return "countryDetails";
   }
 
-  @RequestMapping(value = "/deleteCountry/{id}", method = RequestMethod.GET, headers = "Accept=application/json")
+  @RequestMapping(value = "/deleteCountry/{id}", method = RequestMethod.GET)
   public String deleteCountry(@PathVariable("id") int id) {
     countryService.deleteCountry(id);
-    return "redirect:/getAllCountries";
+    return "redirect:/getAllCountriess";
 
   }
 }

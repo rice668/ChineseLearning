@@ -20,7 +20,7 @@ public class Country {
 
   @Id
   @Column(name="id")
-  @GeneratedValue(strategy=GenerationType.IDENTITY)
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
   int id;
 
   @Column(name="countryName")

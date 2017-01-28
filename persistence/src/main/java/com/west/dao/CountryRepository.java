@@ -4,14 +4,14 @@ package com.west.dao;
  * Created by zhangminglei on 2017/1/28.
  */
 import java.util.List;
-        import com.west.entity.Country;
-        import org.hibernate.Session;
-        import org.hibernate.SessionFactory;
-        import org.springframework.beans.factory.annotation.Autowired;
-        import org.springframework.stereotype.Repository;
+import com.west.entity.Country;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
 @Repository
-public class CountryDAO {
+public class CountryRepository {
 
   @Autowired
   private SessionFactory sessionFactory;
