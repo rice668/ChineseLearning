@@ -29,29 +29,17 @@ public class CountryController {
     return "countryDetails";
   }
 
-  @RequestMapping(value = "/getCountry/{id}", method = RequestMethod.GET)
-  public Country getCountryById(@PathVariable int id) {
-    return countryService.getCountry(id);
-  }
-
   @RequestMapping(value = "/addCountry", method = RequestMethod.POST)
   public String addCountry(@ModelAttribute("country") Country country) {
     countryService.addCountry(country);
     return "redirect:/getAllCountriess";
   }
 
-  @RequestMapping(value = "/updateCountry/{id}", method = RequestMethod.PUT)
-  public String updateCountry(@PathVariable("id") int id,Model model) {
-    model.addAttribute("country", this.countryService.getCountry(id));
-    model.addAttribute("listOfCountries", this.countryService.getAllCountries());
-    return "countryDetails";
-  }
-
   @RequestMapping(value = "/deleteCountry/{id}", method = RequestMethod.GET)
   public String deleteCountry(@PathVariable("id") int id) {
     countryService.deleteCountry(id);
     return "redirect:/getAllCountriess";
-
   }
+
 }
 

@@ -16,10 +16,6 @@ public class CountryRepository {
   @Autowired
   private SessionFactory sessionFactory;
 
-  public void setSessionFactory(SessionFactory sf) {
-    this.sessionFactory = sf;
-  }
-
   public List<Country> getAllCountries() {
     Session session = this.sessionFactory.getCurrentSession();
     List<Country> countryList = session.createQuery("from Country").list();
@@ -36,11 +32,6 @@ public class CountryRepository {
     Session session = this.sessionFactory.getCurrentSession();
     session.persist(country);
     return country;
-  }
-
-  public void updateCountry(Country country) {
-    Session session = this.sessionFactory.getCurrentSession();
-    session.update(country);
   }
 
   public void deleteCountry(int id) {
