@@ -2,7 +2,7 @@ DROP DATABASE chinese;
 CREATE DATABASE chinese;
 USE chinese;
 
-create table t_user
+create table user
 (
 	id bigint(20) not null auto_increment,
     created_date datetime not null,

@@ -1,15 +1,17 @@
 package com.west.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 /**
  * Created by zhangminglei on 2017/1/8.
  */
 @Entity
-@Table(name = "t_user")
+@Table(name = "user")
 public class User extends BaseEntity {
+
+  @Column(name = "username")
   private String username;
+  @Column(name = "password")
   private String password;
 
   public String getUsername() {

@@ -1,28 +1,27 @@
 package com.west.service;
 
+import com.west.dao.UserRepository;
 import com.west.entity.User;
 import com.west.pojo.DataResult;
 import com.west.pojo.Result;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
 /**
  * Created by zhangminglei on 2017/1/9.
  */
-public interface UserService {
+@Service
+public class UserService {
 
-  Result login(String username, String password);
+  @Autowired
+  UserRepository userRepository;
 
-  Result addUser(User user);
-
-  Result deleteUser(Long id);
-
-  Result resetPassword(Long id);
-
-  String getUsernameById(Long id);
-
-  User findByUsername(String username);
-
-  DataResult<List<User>> findAll();
+  @Transactional
+  public void addUser(User user) {
+    userRepository.addUser(user);
+  }
 
 }
