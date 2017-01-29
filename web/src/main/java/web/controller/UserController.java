@@ -19,8 +19,9 @@ public class UserController {
   @Autowired
   UserService userService;
 
-  @RequestMapping(value = "/addUser", method = RequestMethod.POST)
-  public Result addUser(@RequestBody String data) {
+  @RequestMapping(value = "/addUser", method = RequestMethod.POST, headers = "Accept=application/json")
+  public Result addUser(@RequestBody User user) {
+    System.out.println(user.toString());
     return new Result(true);
   }
 
