@@ -28,13 +28,11 @@ public class CountryService {
 
   @Transactional
   public void addCountry(Country country) {
-    System.out.println("addCountry invoked");
     countryRepository.addCountry(country);
   }
 
   @Transactional
   public void deleteCountry(int id) {
-    System.out.println("deleteCountry invoked");
     countryRepository.deleteCountry(id);
   }
 }
