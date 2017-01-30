@@ -10,7 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-@Service("countryService")
+@Service
 public class CountryService {
 
   @Autowired
@@ -28,13 +28,11 @@ public class CountryService {
 
   @Transactional
   public void addCountry(Country country) {
-    System.out.println("addCountry invoked");
     countryRepository.addCountry(country);
   }
 
   @Transactional
   public void deleteCountry(int id) {
-    System.out.println("deleteCountry invoked");
     countryRepository.deleteCountry(id);
   }
 }
