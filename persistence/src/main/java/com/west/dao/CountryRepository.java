@@ -5,6 +5,7 @@ package com.west.dao;
  */
 import java.util.List;
 import com.west.entity.Country;
+import com.west.entity.User;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;

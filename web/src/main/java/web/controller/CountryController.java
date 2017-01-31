@@ -36,8 +36,8 @@ public class CountryController {
 
   @RequestMapping(value = "/addCountry", method = RequestMethod.POST)
   public String addCountry(@ModelAttribute("country") Country country) {
-    countryService.addCountry(country);
-    return "hello";
+//    countryService.addCountry(country);
+    return "index";
   }
 
   @RequestMapping(value = "/updateCountry/{id}", method = RequestMethod.PUT)

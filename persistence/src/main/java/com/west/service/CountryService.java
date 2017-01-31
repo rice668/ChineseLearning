@@ -6,6 +6,7 @@ package com.west.service;
 import java.util.List;
 import com.west.dao.CountryRepository;
 import com.west.entity.Country;
+import com.west.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
