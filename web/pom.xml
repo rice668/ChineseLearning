@@ -12,14 +12,6 @@
     <name>web</name>
     <packaging>war</packaging>
 
-    <properties>
-        <java.version>1.8</java.version>
-        <argLine>-Dfile.encoding=UTF-8</argLine>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    </properties>
-
-
     <dependencies>
         <dependency>
             <groupId>China</groupId>

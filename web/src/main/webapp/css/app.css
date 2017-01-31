@@ -1,3 +1,8 @@
 ﻿a {
     cursor: pointer;
 }
+
+.jumbotron {
+    min-height: 642px;
+    margin-bottom: 0px;
+}

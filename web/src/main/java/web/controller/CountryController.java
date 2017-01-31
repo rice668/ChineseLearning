@@ -37,7 +37,7 @@ public class CountryController {
   @RequestMapping(value = "/addCountry", method = RequestMethod.POST)
   public String addCountry(@ModelAttribute("country") Country country) {
     countryService.addCountry(country);
-    return "redirect:/getAllCountries";
+    return "hello";
   }
 
   @RequestMapping(value = "/updateCountry/{id}", method = RequestMethod.PUT)
