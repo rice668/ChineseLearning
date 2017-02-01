@@ -28,7 +28,7 @@ public class CountryService {
   }
 
   @Transactional
-  public void addCountry(Country country) {
+  public void addCountry(User country) {
     countryRepository.addCountry(country);
   }
 

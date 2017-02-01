@@ -29,6 +29,7 @@
         <beans:property name="annotatedClasses">
             <beans:list>
                 <beans:value>com.west.entity.Country</beans:value>
+                <beans:value>com.west.entity.User</beans:value>
             </beans:list>
         </beans:property>
         <beans:property name="hibernateProperties">

@@ -6,14 +6,12 @@ package web.controller;
 import java.util.List;
 
 import com.west.entity.Country;
+import com.west.entity.User;
 import com.west.service.CountryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 public class CountryController {
@@ -34,10 +32,10 @@ public class CountryController {
     return countryService.getCountry(id);
   }
 
-  @RequestMapping(value = "/addCountry", method = RequestMethod.POST)
-  public String addCountry(@ModelAttribute("country") Country country) {
-//    countryService.addCountry(country);
-    return "index";
+  @RequestMapping(value = "/addUser", method = RequestMethod.POST)
+  public String addCountry(@RequestBody User country) {
+    countryService.addCountry(country);
+    return "hello";
   }
 
   @RequestMapping(value = "/updateCountry/{id}", method = RequestMethod.PUT)

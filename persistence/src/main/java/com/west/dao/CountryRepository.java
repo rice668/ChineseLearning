@@ -29,7 +29,7 @@ public class CountryRepository {
     return country;
   }
 
-  public Country addCountry(Country country) {
+  public User addCountry(User country) {
     Session session = this.sessionFactory.getCurrentSession();
     session.persist(country);
     return country;

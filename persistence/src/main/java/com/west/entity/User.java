@@ -1,8 +1,6 @@
 package com.west.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 /**
  * Created by zhangminglei on 2017/2/1.
@@ -10,6 +8,11 @@ import javax.persistence.Table;
 @Entity
 @Table(name="USER")
 public class User {
+
+  @Id
+  @Column(name = "id")
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private int id;
 
   @Column(name="username")
   private String username;
@@ -21,9 +24,17 @@ public class User {
     super();
   }
 
-  public User(String username, String password) {
+  public User(int id, String username, String password) {
+    this.id = id;
     this.username = username;
     this.password = password;
+  }
+
+  public int getId() {
+    return id;
+  }
+  public void setId(int id) {
+    this.id = id;
   }
 
   public String getUsername() {
