@@ -9,6 +9,7 @@ import com.west.entity.Country;
 import com.west.entity.User;
 import com.west.service.CountryService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -33,9 +34,9 @@ public class CountryController {
   }
 
   @RequestMapping(value = "/addUser", method = RequestMethod.POST)
-  public String addCountry(@RequestBody User country) {
+  @ResponseStatus(HttpStatus.NO_CONTENT)
+  public void addCountry(@RequestBody User country) {
     countryService.addCountry(country);
-    return "hello";
   }
 
   @RequestMapping(value = "/updateCountry/{id}", method = RequestMethod.PUT)
